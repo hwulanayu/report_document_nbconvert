@@ -29,7 +29,6 @@ cd [virtual_environmet_name]\Scripts\activate
 macOS & Linux
 ```
 source [virtual_environmet_name]/bin/activate
-
 ```
 Make sure you’re in the right directory.
 If you using Anaconda/Miniconda/Miniforge environtment, use this command:
@@ -47,7 +46,6 @@ In your Terminal or Command Prompt, type the command:
 
 ```
 pip install nbconvert
-
 ```
 OR
 ```
@@ -95,6 +93,7 @@ Make sure your command-line prompt already in the ipynb file directory. If not, 
    + example: `cd C:\Users\hwulanayu\Documents\`
    + If your directory has spaces, use quotes. example: `cd "C:\Users\hwulanayu\template folder"`
    + Make sure the file storage drive with your Command Prompt base directory is the same. If different, please first change the drive directory by using `cd ..` to backtrack to the root directory. example of changing directory from C to D drive:
+   
    ```
    (base) C:\Users\hwulanayu> cd ..
    (base) C:\Users>cd ..
@@ -149,7 +148,7 @@ Many formats are [supported by nbconvert](https://nbconvert.readthedocs.io/en/la
     If this option is provided, embed images as base64 urls in the resulting HTML file.
 
 
-> Official Documentation: https://nbconvert.readthedocs.io/en/latest/usage.html#html
+> Official Documentation: [html format](https://nbconvert.readthedocs.io/en/latest/usage.html#html)
 
 ### IPYNB to PDF
 
@@ -317,7 +316,6 @@ Python 3.9.16 (main, Mar  8 2023, 04:29:24)
 [Clang 14.0.6 ] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
-
 ```
 Either on CLI or jupyter notebook, make sure `import nbconvert` first.
 
@@ -326,6 +324,7 @@ Either on CLI or jupyter notebook, make sure `import nbconvert` first.
 The official Jupyter Notebook format is defined with [this JSON schema](https://github.com/jupyter/nbformat/blob/main/nbformat/v4/nbformat.v4.schema.json), which is used by Jupyter tools to validate notebooks. `.read()` function of nbconvert, reads the notebook in JSON format.
 
 > Official Documentation: [*notebook file format.*](https://nbformat.readthedocs.io/en/latest/format_description.html)
+
 ```python
 import nbconvert
 
@@ -389,7 +388,6 @@ Below are the command-line syntax using the CLI to remove cells, input, and outp
 ```
 jupyter nbconvert <FILE_NAME>.ipynb --to <FORMAT> 
 --TagRemovePreprocessor.remove_cell_tags <REMOVE_CELL_TAG>
-
 ```
 
 ### Remove input code cells 
@@ -397,7 +395,6 @@ jupyter nbconvert <FILE_NAME>.ipynb --to <FORMAT>
 ```
 jupyter nbconvert <FILE_NAME>.ipynb --to <FORMAT> 
 --TagRemovePreprocessor.remove_input_tags <REMOVE_INPUT_TAG>
-
 ```
 
 ### Remove output cells
@@ -405,7 +402,6 @@ jupyter nbconvert <FILE_NAME>.ipynb --to <FORMAT>
 ```
 jupyter nbconvert <FILE_NAME>.ipynb --to <FORMAT> 
 --TagRemovePreprocessor.remove_all_outputs_tags <REMOVE_OUTPUT_TAG>
-
 ```
 
 
@@ -414,7 +410,6 @@ This additional example demonstrates using the CLI to combine remove cells and h
 ```
 jupyter nbconvert mynotebook.ipynb --TagRemovePreprocessor.remove_cell_tags remove_cell 
 --TagRemovePreprocessor.remove_input_tags --remove_input_cell
-
 ```
 
 # Handling Installation Errors
@@ -442,7 +437,6 @@ error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft 
   ERROR: Failed building wheel for pysqlite3
 Failed to build pysqlite3
 ERROR: Could not build wheels for pysqlite3, which is required to install pyproject.toml-based projects
-
 ```
 
 **Solved by: installing the C++ build tools**
@@ -478,7 +472,6 @@ find sqlite3.dll in window search. Open the file location. Copy the file to the 
   File "C:\Users\hwulanayu\env\lib\site-packages\traitlets\utils\importstring.py", line 30, in import_item
     module = __import__(package, fromlist=[obj])
 ModuleNotFoundError: No module named 'jupyter_contrib_nbextensions'
-
 ```
 **Solved by: pip install jupyter_contrib_nbextensions**
 
