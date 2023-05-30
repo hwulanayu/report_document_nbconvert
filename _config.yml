@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+theme: minima
 title: Exporting Notebook Document with Python and nbconvert library
 description: Tutorial or documentation on how to convert ipynb file to html and pdf and customize it with nbconvert library in Python
 markdown: kramdown
