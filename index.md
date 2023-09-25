@@ -317,7 +317,7 @@ Python 3.9.16 (main, Mar  8 2023, 04:29:24)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
-Either on CLI or jupyter notebook, make sure `import nbconvert` first.
+Either on CLI or jupyter notebook, make sure `import nbformat` first.
 
 ### Reading the notebooks
 
@@ -326,7 +326,7 @@ The official Jupyter Notebook format is defined with [this JSON schema](https://
 > Official Documentation: [*notebook file format.*](https://nbformat.readthedocs.io/en/latest/format_description.html)
 
 ```python
-import nbconvert
+import nbformat
 
 first_notebook = nbformat.read("example_file_1.ipynb", as_version=4)
 second_notebook = nbformat.read("example_file_2.ipynb", as_version=4)
